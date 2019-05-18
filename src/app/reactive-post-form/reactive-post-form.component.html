@@ -1,0 +1,16 @@
+<form>
+  <!-- <input type="text" [formControl]="favoriteColorControl"><br> -->
+  <form [formGroup]="postData" (ngSubmit)="onSubmit()">
+    <label>
+      Title:
+      <input type="text" formControlName="title">
+    </label><br>
+    <label>
+      Content:
+      <input type="text" formControlName='content'>
+    </label><br>
+    <button type="submit" [disabled]="!postData.valid">Submit</button>
+
+  </form>
+  <!-- <p>Value: {{favoriteColorControl.value}}</p> -->
+</form>

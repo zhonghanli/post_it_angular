@@ -1,0 +1,9 @@
+<div>
+    <mat-grid-list cols = "4" rowHeight = "500px">
+        <mat-grid-tile 
+        [colspan] = "1"
+        [rowspan] = "1" *ngFor="let post of posts | async">
+            <app-post-card [postdata]="post" (click)="deletePost(post)"></app-post-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
