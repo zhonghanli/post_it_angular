@@ -15,10 +15,8 @@ export class ReactivePostFormComponent{
     content : new FormControl('')
   })
 
-  @Output() submitEvent : EventEmitter<any> = new EventEmitter();
-
   onSubmit() {
     console.log(this.postData.value);
-    var res = this.postService.createPost(this.postData.value);
+    this.postService.createPost(this.postData.value);
   }
 }
